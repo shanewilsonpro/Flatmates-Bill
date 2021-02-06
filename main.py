@@ -24,9 +24,9 @@ class ResultsPage(MethodView):
 
         return render_template("results.html",
                                name1=flatmate1.name,
-                               amount1=flatmate1.pays(the_bill, flatmate2),
+                               amount1=round(flatmate1.pays(the_bill, flatmate2), 2),
                                name2=flatmate2.name,
-                               amount2=flatmate2.pays(the_bill, flatmate1))
+                               amount2=round(flatmate2.pays(the_bill, flatmate1), 2))
 
 class BillForm(Form):
     amount = StringField("Bill Amount: ")
