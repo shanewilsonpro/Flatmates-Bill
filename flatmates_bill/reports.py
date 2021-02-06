@@ -40,5 +40,5 @@ class PdfReport:
         pdf.cell(w=150, h=25, txt=flatmate2_pay, border=0, ln=1)
 
         # change directory to resources, generate and open PDF
-        os.chdir("resources")
+        os.chdir("../resources")
         pdf.output(self.filename)
